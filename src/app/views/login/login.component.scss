@@ -10,15 +10,23 @@
     background-repeat: no-repeat;
     &-slogan {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: column;
         height: 67%;
         padding: 1rem;
     }
-    &-form {
+    &-start {
+        display: flex;
+        align-items: center;
         height: 33%;
         padding: 1rem;
         background-color: var(--color-overlay);
+        &-info {
+            flex: 50%;
+        }
+        &-form {
+            flex: 50%;
+        }
     }
 }
 
@@ -31,9 +39,25 @@
             width: 67%;
             height: 100%;
         }
-        &-form {
+        &-start {
+            justify-content: center;
+            flex-direction: column;
             width: 33%;
             height: 100%;
+            &-info {
+                flex: initial;
+                width: 100%;
+                padding: 0 0 .5rem 0;
+                &-logo {
+                    display: block;
+                    margin: 0 0 1rem 0;
+                }
+            }
+            &-form {
+                flex: initial;
+                width: 100%;
+                padding: .5rem 0 0 0;
+            }
         }
     }
 }

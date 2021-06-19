@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
     this.sloganTexts = ['Dormir', 'es', 'salud'];
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
