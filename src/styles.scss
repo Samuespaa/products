@@ -1,9 +1,33 @@
+:root {
+    --color-primary: #b3ffa2;
+    --color-primary-light: #c9febd;
+    --color-primary-dark: #6fb360;
+    --color-secondary: #b34f9b;
+    --color-secondary-light: #ffa3e9;
+    --color-warning: #fbad34;
+    --color-error: #f44336;
+    --color-error-dark: #b3001b;
+    --color-white: #ffffff;
+    --color-gray-lighter: #f3f2f1;
+    --color-gray-light: #d3d2d1;
+    --color-gray: #999999;
+    --color-gray-dark: #666666;
+    --color-gray-darker: #333333;
+    --color-black: #000000;
+    --color-overlay: rgba(179, 255, 162, .66);
+}
+
 html,
 body {
     height: 100%;
 }
 
 body {
+    box-sizing: border-box;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body * {
+    box-sizing: inherit;
 }

@@ -1,0 +1,39 @@
+.login {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/login-background.jpg');
+    background-position: 40% 66%;
+    background-repeat: no-repeat;
+    &-slogan {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 67%;
+        padding: 1rem;
+    }
+    &-form {
+        height: 33%;
+        padding: 1rem;
+        background-color: var(--color-overlay);
+    }
+}
+
+@media (min-width: 1024px) {
+    .login {
+        flex-direction: initial;
+        background-position: center;
+        background-size: cover;
+        &-slogan {
+            width: 67%;
+            height: 100%;
+        }
+        &-form {
+            width: 33%;
+            height: 100%;
+        }
+    }
+}

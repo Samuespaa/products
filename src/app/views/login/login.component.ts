@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  public sloganTexts: string[];
 
-  constructor() { }
+  constructor() {
+    this.sloganTexts = ['Dormir', 'es', 'salud'];
+  }
 
   ngOnInit(): void {
   }
