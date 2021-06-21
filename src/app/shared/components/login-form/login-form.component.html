@@ -1,1 +1,23 @@
-<p>login-form works!</p>
+<div class="login-form">
+    <div class="login-form-error" *ngIf="message">
+        <mat-icon class="login-form-error-icon">error</mat-icon>
+        <span class="login-form-error-text">{{message}}</span>
+    </div>
+    <mat-form-field class="login-form-user">
+        <mat-label class="login-form-user-label">Usuario</mat-label>
+        <input matInput type="text" [(ngModel)]="user">
+        <mat-hint align="start">Prueba Invitado</mat-hint>
+        <div class="login-form-user-clear" *ngIf="user" matSuffix mat-icon-button (click)="user=''">
+            <mat-icon>close</mat-icon>
+        </div>
+    </mat-form-field>
+    <mat-form-field class="login-form-password">
+        <mat-label class="login-form-user-label">Contraseña</mat-label>
+        <input matInput type="password" [(ngModel)]="password">
+        <mat-hint align="start">Prueba Invitado</mat-hint>
+        <div class="login-form-user-clear" *ngIf="password" matSuffix mat-icon-button (click)="password=''">
+            <mat-icon>close</mat-icon>
+        </div>
+    </mat-form-field>
+    <button class="login-form-access" mat-raised-button color="accent" (click)="login()">Acceder</button>
+</div>
