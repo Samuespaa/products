@@ -20,6 +20,6 @@
         </table>
     </div>
     <div class="products-details">
-        <router-outlet></router-outlet>
+        <fox-product-details *ngIf="productSelected.id" [product]="productSelected"></fox-product-details>
     </div>
 </div>

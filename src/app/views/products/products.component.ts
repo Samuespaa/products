@@ -9,10 +9,13 @@ import { Product } from 'src/app/shared/models/product';
 })
 export class ProductsComponent implements OnInit {
   public products: Product[];
-  public displayedColumns: string[] = ['name', 'status', 'details'];
+  public productSelected: Product;
+  public displayedColumns: string[];
 
   constructor(private productsService: ProductsService) {
     this.products = [];
+    this.productSelected = new Product();
+    this.displayedColumns = ['name', 'status', 'details'];
   }
 
   ngOnInit(): void {
@@ -21,14 +24,14 @@ export class ProductsComponent implements OnInit {
 
   getProducts() {
     /* Camino normal para consultar al backend */
-    this.productsService.getProducts().subscribe(resp => {
-      this.products = resp;
-    });
+    // this.productsService.getProducts().subscribe(resp => {
+    //   this.products = resp;
+    // });
     /* Realizamos un fake login para la prueba */
     this.products = this.productsService.getFakeProducts();
   }
 
   productDetails(product: Product) {
-    
+    this.productSelected = product;
   }
 }

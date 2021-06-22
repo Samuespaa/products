@@ -28,6 +28,9 @@ import { LogoComponent } from './components/logo/logo.component';
       SloganComponent,
       LoginFormComponent,
       LogoComponent,
+      MatInputModule,
+      MatIconModule,
+      MatButtonModule,
       MatTableModule
   ]
 })
