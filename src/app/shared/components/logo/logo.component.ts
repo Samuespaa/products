@@ -12,7 +12,6 @@ export class LogoComponent implements OnInit {
     this.showBrand = true;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
