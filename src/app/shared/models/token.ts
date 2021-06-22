@@ -4,15 +4,15 @@ export class Token implements Deserializable {
     private _id: number;
     private _token: string;
     private _expiration: Date;
-    private _created_at: Date;
-    private _updated_at: Date;
+    private _createdAt: Date;
+    private _updatedAt: Date;
   
     constructor() {
         this._id = 0;
         this._token = '';
         this._expiration = new Date(1970, 0, 1, 1, 0, 0, 0);
-        this._created_at = new Date(1970, 0, 1, 1, 0, 0, 0);
-        this._updated_at = new Date(1970, 0, 1, 1, 0, 0, 0);
+        this._createdAt = new Date(1970, 0, 1, 1, 0, 0, 0);
+        this._updatedAt = new Date(1970, 0, 1, 1, 0, 0, 0);
     }
 
     public get id(): number {
@@ -39,28 +39,28 @@ export class Token implements Deserializable {
       this._expiration = value;
     }
 
-    public get created_at(): Date {
-      return this._created_at;
+    public get createdAt(): Date {
+      return this._createdAt;
     }
 
-    public set created_at(value: Date) {
-      this._created_at = value;
+    public set createdAt(value: Date) {
+      this._createdAt = value;
     }
 
-    public get updated_at(): Date {
-      return this._updated_at;
+    public get updatedAt(): Date {
+      return this._updatedAt;
     }
 
-    public set updated_at(value: Date) {
-      this._updated_at = value;
+    public set updatedAt(value: Date) {
+      this._updatedAt = value;
     }
 
     deserialize(input: any): this {
         this.id = input.id;
         this.token = input.token;
         this.expiration = input.expiration;
-        this.created_at = input.created_at;
-        this.updated_at = input.updated_at;
+        this.createdAt = new Date(input.created_at);
+        this.updatedAt = new Date(input.updated_at);
         return this;
     }
 }

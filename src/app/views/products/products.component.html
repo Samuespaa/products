@@ -1,2 +1,25 @@
-<p>products works!</p>
-<a [routerLink]="['../login']">Login</a>
+<div class="products">
+    <div class="products-list">
+        <table class="products-list-table" mat-table [dataSource]="products">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Nombre</th>
+                <td mat-cell *matCellDef="let product">{{product.name}}</td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Activo</th>
+                <td mat-cell *matCellDef="let product">{{product.status}}</td>
+            </ng-container>
+            <ng-container matColumnDef="details">
+                <th mat-header-cell *matHeaderCellDef>Detalles</th>
+                <td mat-cell *matCellDef="let product">
+                    <button class="products-table-details" mat-raised-button color="accent" (click)="productDetails(product)">Detalles</button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <div class="products-details">
+        <router-outlet></router-outlet>
+    </div>
+</div>
