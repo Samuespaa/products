@@ -9,7 +9,7 @@
     background-position: 40% 66%;
     background-repeat: no-repeat;
     &-slogan {
-        display: flex;
+        display: none;
         justify-content: space-evenly;
         flex-direction: column;
         height: 67%;
@@ -18,14 +18,51 @@
     &-start {
         display: flex;
         align-items: center;
-        height: 33%;
+        height: 100%;
         padding: 1rem;
         background-color: var(--color-overlay);
+        animation-name: showBottom;
+        animation-duration: .75s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
         &-info {
             flex: 50%;
+            padding: 0 .5rem 0 0;
+            &-text {
+                display: none;
+                margin: 1rem 0 0 0;
+                color: var(--color-gray-darker);
+                font-size: 1.125rem;
+                text-align: center;
+            }
         }
         &-form {
             flex: 50%;
+            padding: 0 0 0 .5rem;
+        }
+    }
+}
+
+@media (min-height: 540px) {
+    .login {
+        &-slogan {
+            display: flex;
+        }
+        &-start {
+            height: 33%;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .login {
+        &-start {
+            &-info {
+                &-text {
+                    display: block;
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }
@@ -44,6 +81,7 @@
             flex-direction: column;
             width: 33%;
             height: 100%;
+            animation-name: showRight;
             &-info {
                 flex: initial;
                 width: 100%;

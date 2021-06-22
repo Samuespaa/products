@@ -1,6 +1,6 @@
 .slogan {
     padding: 1rem 0;
-    animation-name: appearBottom;
+    animation-name: showBottom;
     animation-duration: .75s;
     animation-fill-mode: both;
     &-text {
@@ -26,16 +26,5 @@
         &-text {
             font-size: 8rem;
         }
-    }
-}
-
-@keyframes appearBottom{
-    from {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
